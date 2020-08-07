@@ -5,4 +5,32 @@ GET http://localhost:3001/stores
 
 ### Test creating a store
 
+POST http://localhost:3001/stores
+Content-Type: application/json
+
+{
+  "companyName": "Pleasant Valley Country Club",
+  "street": "95 Armsby Rd",
+  "city": "Sutton",
+  "stateOrProvinceCode": "MA",
+  "postalCode": "01590",
+  "phone": "(508) 865-4441"
+}
+
 ### Test the PUT which should change a store
+ 
+PUT http://localhost:3001/stores/5f2cba4eae924c0e2b08792f
+Content-Type: application/json
+
+{
+  "companyName": "Pleasant Valley Country Club",
+  "street": "95 Armsby Rd",
+  "city": "Sutton",
+  "stateOrProvinceCode": "MA",
+  "postalCode": "01590",
+  "phone": "(508) 865-4441",
+  "website": "https://www.pleasantvalleycc.com/"
+}
+
+### Test the DELETE which should delete the store
+DELETE http://localhost:3001/stores/5f2cba4eae924c0e2b08792f
