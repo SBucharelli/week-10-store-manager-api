@@ -24,5 +24,8 @@ Content-Type: application/json
   "size": "2.5in x 2.5in",
   "updated": true
 
-  }
+}
 
+### Test DELETE
+
+DELETE http://localhost:3001/logos/5f2c91e5a3fe5b099e63a6d1
