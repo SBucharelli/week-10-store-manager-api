@@ -1,14 +1,17 @@
-const {getDatabase} = require('./mongo-common');
+const { getDatabase } = require('./mongo-common');
 // https://docs.mongodb.com/manual/reference/method/ObjectId/
-const {ObjectID} = require('mongodb');
+const { ObjectID } = require('mongodb');
+
+const getUserName = require('git-user-name');
 
 // a "collection" in mongo is a lot like a list which is a lot like an Array
 const collectionName = 'logos';
 
 async function createLogo(logo) {
   const database = await getDatabase();
+  logo.addedBy = getUserName()
   // for `insertOne` info, see https://docs.mongodb.com/manual/reference/method/js-collection/
-  const {insertedId} = await database.collection(collectionName).insertOne(logo);
+  const { insertedId } = await database.collection(collectionName).insertOne(logo);
   return insertedId;
 }
 

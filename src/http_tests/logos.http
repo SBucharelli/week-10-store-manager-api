@@ -7,20 +7,20 @@ POST http://localhost:3001/logos
 Content-Type: application/json
 
 {
-  "name": "Tiger Woods",
-  "description": "Nike symbol over two crossed drivers.",
-  "colors": ["black", "red"],
+  "name": "Bunker",
+  "description": "The pit of doom",
+  "colors": ["tan", "brown"],
   "size": "2.5in x 2.5in"
 }
 
 ### Test the PUT which should change a logo
-PUT http://localhost:3001/logos/5f2c91e5a3fe5b099e63a6d1
+PUT http://localhost:3001/logos/5f2c99c1c728050bc2f8ef6b
 Content-Type: application/json
 
 {
-  "name": "Tiger Woods",
-  "description": "Nike symbol over two crossed drivers.",
-  "colors": ["black", "red", "silver"],
+"name": "Bunker",
+  "description": "The pit of doom",
+  "colors": ["tan", "brown"],
   "size": "2.5in x 2.5in",
   "updated": true
 
