@@ -14,18 +14,18 @@ Content-Type: application/json
 }
 
 ### Test the PUT which should change a logo
-PUT http://localhost:3001/logos/5f2c99c1c728050bc2f8ef6b
+PUT http://localhost:3001/logos/5f2f54341d36790f2a09ed28
 Content-Type: application/json
 
 {
 "name": "Bunker",
   "description": "The pit of doom",
   "colors": ["tan", "brown"],
-  "size": "2.5in x 2.5in",
+  "size": "3in x 3in",
   "updated": true
 
 }
 
 ### Test DELETE
 
-DELETE http://localhost:3001/logos/5f2c91e5a3fe5b099e63a6d1
+DELETE http://localhost:3001/logos/5f2f54341d36790f2a09ed28

@@ -5,4 +5,30 @@ GET http://localhost:3001/variations
 
 ### Test creating a variation
 
+POST http://localhost:3001/variations
+Content-Type: application/json
+
+{
+    "sku": 8675309,
+    "combinationNumber": 2,
+    "options": [
+            {"color": "Silver"},
+            {"color": "Blue"}
+        ]
+}
 ### Test the PUT which should change a variation
+
+PUT http://localhost:3001/variations/5f2f66e51b39a514dc86e935
+Content-Type: application/json
+
+{
+    "sku": 8675309,
+    "combinationNumber": 2,
+    "options": [
+            {"color": "Purple"},
+            {"color": "Blue"}
+        ]
+}
+
+### Test the DELETE which should delete a variation
+DELETE http://localhost:3001/variations/5f2f66e51b39a514dc86e935

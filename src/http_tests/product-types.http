@@ -8,4 +8,24 @@ GET http://localhost:3001/product-types
 
 ### Test creating a type
 
+POST http://localhost:3001/product-types
+Content-Type: application/json
+
+{
+    "name": "Nike",
+    "type": "Apparel"
+}
+
 ### Test the PUT which should change a type
+
+PUT http://localhost:3001/product-types/5f2f5c3663d83e11cbe355ea
+Content-Type: application/json
+
+{
+    "name": "Titleist",
+    "type": "Gold gear"
+}
+
+### Test the DELETE which should delete a type
+
+DELETE http://localhost:3001/product-types/5f2f5bd463d83e11cbe355e9

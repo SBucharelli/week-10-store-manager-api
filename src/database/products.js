@@ -3,7 +3,6 @@ const { getDatabase } = require('./mongo-common');
 const { ObjectID } = require('mongodb');
 
 const getUserName = require('git-user-name');
-console.log(getUserName());
 
 // a "collection" in mongo is a lot like a list which is a lot like an Array
 const collectionName = 'products';
@@ -53,5 +52,5 @@ module.exports = {
   createProduct,
   getProducts,
   deleteProduct,
-  updateProduct,
+  updateProduct
 };
